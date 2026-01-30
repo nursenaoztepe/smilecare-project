@@ -1,0 +1,140 @@
+body {
+    background-color: red;
+}
+
+* {
+    box-sizing: border-box; /* Taşma olmaması için */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+}
+
+.navbar {
+    display: flex; /* Menü elemanlarını yan yana almak için */
+    justify-content: space-between; /* İki uca yaslamak için */
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #233b61;
+}
+
+.logo {
+    color: white;
+}
+
+.nav-links {
+    display: flex; /* Linkleri yan yana dizmek için */
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    display: flex; /* Yazı ve görseli yan yana almak için */
+    gap: 30px;
+    padding: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.services {
+    padding: 40px;
+    text-align: center;
+}
+
+.service-grid {
+    display: grid; /* Hizmetleri grid yapmak için */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+}
+
+.price-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* TASK 2.2 */
+.price-list {
+    display: flex; /* Kartları yan yana almak için */
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 40px;
+    margin: 0;
+}
+
+.price-list li {
+    background-color: white;
+    padding: 25px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        @media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        /* Mobilde resmi üste, yazıyı alta almak için */
+        text-align: center;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .price-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+        text-align: center;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .price-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
