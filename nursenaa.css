@@ -1,0 +1,405 @@
+body {
+    background-color: red;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+}
+
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #233b61;
+}
+
+.logo {
+    color: white;
+}
+
+.nav-links {
+    display: flex; 
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    display: flex; 
+    gap: 30px;
+    padding: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.services {
+    padding: 40px;
+    text-align: center;
+}
+
+.service-grid {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+}
+
+.price-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.price-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 40px;
+    margin: 0;
+}
+
+.price-list li {
+    background-color: white;
+    padding: 25px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        @media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .price-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+        text-align: center;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .price-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.team-intro {
+    text-align: center;
+    padding: 40px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
+.team-card {
+    width: 250px;
+    height: 330px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.team-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card-front img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.certificate {
+    width: 120px;
+    margin-top: 10px;
+}
+.quote {
+    padding: 40px;
+    text-align: center;
+    background-color: #ffffff;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.quote select,
+.quote button {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#sonuc {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #233b61;
+}
+/* QUOTE + APPOINTMENT SMILECARE TASARIM */
+
+.quote,
+.appointment {
+    background-color: #F7F9F7;
+    margin: 60px auto;
+    padding: 50px 40px;
+    width: 85%;
+    max-width: 950px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+/* Başlıklar */
+.quote h2,
+.appointment h2 {
+    color: #1F2D27;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+/* Select + Input + Textarea */
+.quote select,
+.appointment input,
+.appointment textarea {
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #C8D5CC;
+    background-color: #ffffff;
+    font-size: 14px;
+    transition: 0.3s;
+    outline: none;
+}
+
+/* Focus efekti */
+.quote select:focus,
+.appointment input:focus,
+.appointment textarea:focus {
+    border-color: #3F5F4B;
+    box-shadow: 0 0 6px rgba(63, 95, 75, 0.25);
+}
+
+/* Textarea boyutu */
+.appointment textarea {
+    width: 60%;
+    min-height: 80px;
+    resize: none;
+}
+
+/* Butonlar */
+#btnHesapla,
+.appointment button {
+    background-color: #3F5F4B;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+/* Hover */
+#btnHesapla:hover,
+.appointment button:hover {
+    background-color: #2F4A3A;
+    transform: translateY(-2px);
+}
+
+/* Checkbox yazı */
+.quote label {
+    color: #1F2D27;
+    font-weight: 500;
+}
+/* DARK MODE */
+
+body.dark-mode {
+    background-color: #1E2A24;
+    color: #E8F0EA;
+}
+
+body.dark-mode .navbar {
+    background-color: #16201B;
+}
+
+body.dark-mode .quote,
+body.dark-mode .appointment,
+body.dark-mode .services,
+body.dark-mode .team-page {
+    background-color: #24332B;
+    color: #E8F0EA;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #2E3F36;
+    color: white;
+    border: 1px solid #4F6B5A;
+}
+
+body.dark-mode #btnHesapla,
+body.dark-mode .appointment button {
+    background-color: #4F6B5A;
+}
+
+body.dark-mode #btnHesapla:hover,
+body.dark-mode .appointment button:hover {
+    background-color: #3C5447;
+}
+
+/* Toggle Butonu */
+#themeToggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+/* DARK MODE YAZI DÜZELTME */
+
+body.dark-mode {
+    color: #F2F6F3;  /* Daha açık yazı */
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode label {
+    color: #F2F6F3;
+}
+
+body.dark-mode .nav-links a,
+body.dark-mode .extra-links a {
+    color: #E4EEE8;
+}
+
+body.dark-mode .nav-links a:hover,
+body.dark-mode .extra-links a:hover {
+    color: #FFFFFF;
+}
+
+body.dark-mode .card,
+body.dark-mode .team-card {
+    background-color: #2A3A32;
+    color: #F2F6F3;
+}
+
+body.dark-mode .quote,
+body.dark-mode .appointment {
+    background-color: #24332B;
+}
+.currency-app {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #f5f5ec; /* fil dişi */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.currency-app h2 {
+    margin-bottom: 20px;
+}
+
+.currency-app input,
+.currency-app select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.currency-app button {
+    background-color: #9caf88; /* ada çayı tonu */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.currency-app button:hover {
+    background-color: #879c76;
+}
+

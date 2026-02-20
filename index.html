@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SmileCare Diş Kliniği</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nursenaa.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1 class="logo">SmileCare</h1>
+        <button id="themeToggle">🌙</button>
+        <ul class="nav-links">
+            <li><a href="#">Anasayfa</a></li>
+            <li><a href="#">Hizmetler</a></li>
+            <li><a href="#">Hakkımızda</a></li>
+            <li><a href="#">İletişim</a></li>
+            <li><a href="currency.html">Döviz</a></li>
+        </ul>
+        <div class="extra-links">
+            <a href="index.html">Anasayfa</a>
+            <a href="task2.html">Paketler</a>
+            <a href="team.html">Ekibimiz</a>
+        </div>
+
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Sağlıklı Gülüşler İçin</h2>
+            <p>Modern teknolojilerle güvenilir diş sağlığı hizmetleri sunuyoruz.</p>
+        </div>
+
+        <div class="hero-image">
+            <img src="dis.jpg" alt="Diş Kliniği">
+
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Hizmetlerimiz</h2>
+
+        <div class="service-grid">
+            <div class="card">Diş Muayenesi</div>
+            <div class="card">İmplant Tedavisi</div>
+            <div class="card">Ortodonti</div>
+            <div class="card">Diş Beyazlatma</div>
+            <div class="card">Çocuk Diş</div>
+            <div class="card">Ağız ve Diş Cerrahisi</div>
+        </div>
+    </section>
+    <section class="quote">
+        <h2>Tahmini Tedavi Ücreti Hesapla</h2>
+
+        <label for="implantCount">İmplant Sayısı:</label>
+        <select id="implantCount">
+            <option value="0">Seçiniz</option>
+            <option value="1">1 Adet</option>
+            <option value="2">2 Adet</option>
+            <option value="3">3 Adet</option>
+        </select>
+        <section class="appointment">
+            <h2>Online Randevu Al</h2>
+
+            <form id="appointmentForm">
+                <input type="text" id="name" placeholder="Ad Soyad">
+                <input type="email" id="email" placeholder="E-posta">
+                <input type="date" id="date">
+                <textarea id="message" placeholder="Mesajınız"></textarea>
+                <button type="submit">Randevu Gönder</button>
+                <p id="formResult"></p>
+            </form>
+        </section>
+
+        <br><br>
+
+        <label>
+            <input type="checkbox" id="whitening">
+            Diş Beyazlatma İstiyorum
+        </label>
+
+        <br><br>
+
+        <button id="btnHesapla">Hesapla</button>
+
+        <p id="sonuc"></p>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Döviz Çevirici</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nursenaa.css">
+</head>
+
+<body>
+
+    <section class="currency-app">
+        <h2>💱 Güncel Döviz Çevirici</h2>
+
+        <input type="number" id="amount" placeholder="Miktar giriniz">
+
+        <select id="currency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+        </select>
+
+        <button onclick="convertCurrency()">Çevir</button>
+
+        <p id="result"></p>
+    </section>
+
+    <script src="currency.js"></script>
+</body>
+
+</html>
